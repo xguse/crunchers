@@ -28,7 +28,8 @@ i_requires = ["pandas",
               "scikit-learn",
               "statsmodels",
               "matplotlib",
-              "seaborn"]
+              "seaborn",
+              "munch"]
 
 
 setup(
