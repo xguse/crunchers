@@ -24,6 +24,13 @@ def read(*names, **kwargs):
     ).read()
 
 
+i_requires = ["pandas",
+              "scikit-learn",
+              "statsmodels",
+              "matplotlib",
+              "seaborn"]
+
+
 setup(
     name='crunchers',
     version='0.0.1',
@@ -58,9 +65,7 @@ setup(
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
-    install_requires=[
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
-    ],
+    install_requires=i_requires,
     extras_require={
         # eg:
         #   'rst': ['docutils>=0.11'],

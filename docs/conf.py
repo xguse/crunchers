@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 import os
 
 
+
+
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
@@ -11,7 +13,7 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
-    'sphinxcontrib.napoleon'
+    'sphinx.ext.napoleon'
 ]
 if os.getenv('SPELLCHECK'):
     extensions += 'sphinxcontrib.spelling',
@@ -25,12 +27,24 @@ year = '2016'
 author = 'Gus Dunn'
 copyright = '{0}, {1}'.format(year, author)
 version = release = '0.0.1'
-import sphinx_rtd_theme
-html_theme = "sphinx_rtd_theme"
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_theme_options = {
-    'githuburl': 'https://github.com/xguse/crunchers/'
-}
+
+# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+# only import and set the theme if we're building docs locally
+if not on_rtd:
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    # html_theme_options = {
+    #     'githuburl': 'https://github.com/xguse/crunchers/'}
+# otherwise, readthedocs.org uses their theme by default, so no need to specify it
+
+# import sphinx_rtd_theme
+# html_theme = "sphinx_rtd_theme"
+# html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# html_theme_options = {
+#     'githuburl': 'https://github.com/xguse/crunchers/'
+# }
 
 pygments_style = 'trac'
 templates_path = ['.']
