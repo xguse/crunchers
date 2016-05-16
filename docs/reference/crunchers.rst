@@ -1,0 +1,5 @@
+crunchers
+=========
+
+.. automodule:: crunchers
+    :members:

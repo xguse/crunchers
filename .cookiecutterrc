@@ -1,0 +1,31 @@
+# This file exists so you can easily regenerate your project.
+#
+# Unfortunatelly cookiecutter can't use this right away so
+# you have to copy this file to ~/.cookiecutterrc
+
+default_context:
+
+    c_extension_optional:      'no'
+    c_extension_support:       'no'
+    codacy:                    'no'
+    codeclimate:               'no'
+    codecov:                   'yes'
+    command_line_interface:    'no'
+    coveralls:                 'no'
+    distribution_name:         'crunchers'
+    email:                     'w.gus.dunn@gmail.com'
+    full_name:                 'Gus Dunn'
+    github_username:           'xguse'
+    landscape:                 'no'
+    package_name:              'crunchers'
+    project_name:              'Crunchers'
+    project_short_description: 'A library that provides a set of helper functions etc that I tend to use a lot when crunching data with scikit-learn, pandas, et al.'
+    release_date:              '2016-05-13'
+    repo_name:                 'crunchers'
+    scrutinizer:               'no'
+    sphinx_theme:              'sphinx-rtd-theme'
+    test_matrix_configurator:  'no'
+    test_runner:               'pytest'
+    version:                   '0.0.1'
+    website:                   'https://github.com/xguse'
+    year:                      '2016'
