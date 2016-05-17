@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+statsmodels
+matplotlib
+seaborn
+munch
+hypothesis

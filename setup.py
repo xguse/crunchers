@@ -24,13 +24,7 @@ def read(*names, **kwargs):
     ).read()
 
 
-i_requires = ["pandas",
-              "scikit-learn",
-              "statsmodels",
-              "matplotlib",
-              "seaborn",
-              "munch",
-              "hypothesis"]
+install_reqs = [line.rstrip('\n') for line in open("requirements.txt", 'r')]
 
 
 setup(
@@ -67,7 +61,7 @@ setup(
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
-    install_requires=i_requires,
+    install_requires=install_reqs,
     extras_require={
         # eg:
         #   'rst': ['docutils>=0.11'],

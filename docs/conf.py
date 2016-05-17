@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import os
+import os, sys
 
-
+sys.path.insert(0, os.path.abspath('../src'))
 
 
 extensions = [
