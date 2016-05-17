@@ -12,7 +12,7 @@ def apply_ignore_null(func, s, fillwith=None):
 
     You may prefer to use the mean or median like this:
 
-    >>> apply_ignore_null(func, s, fillwith=np.mean(s))
+    `apply_ignore_null(func, s, fillwith=np.mean(s))`
 
     Returns a reconstituted pandas.Series with 'nan' everywhere there was an original 'nan',
     but with the transformed values everywhere else.

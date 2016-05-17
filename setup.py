@@ -29,7 +29,8 @@ i_requires = ["pandas",
               "statsmodels",
               "matplotlib",
               "seaborn",
-              "munch"]
+              "munch",
+              "hypothesis"]
 
 
 setup(
