@@ -11,7 +11,7 @@ import seaborn as sns
 from crunchers.pandas_helpers.transformations import apply_pairwise
 from crunchers.sklearn_helpers.misc import repandasify
 
-def pca_and_report(data, plot_comps=[1,2,3,4], verbose=True, pca=PCA(), data_labels=None):
+def pca_and_report(data, verbose=True, pca=PCA(), data_labels=None):
     """Generate figures and tables to provide insight into PCA results."""
     r = munch.Munch()
 
