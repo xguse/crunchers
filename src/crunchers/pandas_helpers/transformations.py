@@ -38,3 +38,26 @@ def apply_pairwise(series, func):
         df[col][idx] = func([series[idx], series[col]])
 
     return df
+
+
+# Data Scaling
+def zero_stdv_columns(df):
+    """Return list of column names where standard deviation == 0."""
+    std0_mask = df.std() == 0
+    return df.columns[std0_mask]
+
+def std_scale(df):
+    """Return scaled copy of df tolerating columns where stdev == 0."""
+    stdv_0_cols = zero_stdv_columns(df)
+    scaled = (df - df.mean())/df.std()
+    scaled = scaled.copy()
+    scaled.loc[:,stdv_0_cols] = 0
+    return scaled
+
+
+
+def robust_scale(df):
+    """Return copy of `df` scaled by (df - df.median()) / MAD(df) where MAD is a function returning the median absolute deviation."""
+    median_subtracted = df - df.median()
+    mad = median_subtracted.abs().median()
+    return median_subtracted/mad
